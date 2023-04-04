@@ -1,0 +1,38 @@
+.header {
+  text-align: right;
+  padding: 0 2px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.filters .filter-item {
+  width: 45%;
+}
+.date-range {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.date-range-item {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0;
+  }
+  .filters {
+    flex-direction: column;
+  }
+  .date-range-item {
+    margin-top: 10px;
+  }
+  .filters .filter-item {
+    width: 100%;
+    overflow: hidden;
+  }
+}

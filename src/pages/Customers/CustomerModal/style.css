@@ -1,0 +1,19 @@
+.input-field{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 47px;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h1{
+    color:#283686 ;
+}
+
+.cross-icon{
+    font-size: 29px!important;
+    cursor: pointer;
+}
