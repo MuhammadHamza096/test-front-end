@@ -13,7 +13,7 @@ This is a responsive dashboard application that displays data from a REST API. T
 - Install dependencies with `npm install`.
 - Create the .env file in the project directory.
 - Paste the url with 
-`REACT_APP_API_URL=https://test-backend-repo-84ptfx5y3-muhammadhamza096.vercel.app/api/v1/`
+`REACT_APP_API_URL=https://test-backend-repo.vercel.app/api/v1/`
 - `npm start` 
 
 ## Mock Data
