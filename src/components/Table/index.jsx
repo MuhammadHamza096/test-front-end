@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import CircularProgress from "@mui/material/CircularProgress";
+import "./style.css";
 
 const BasicTable = ({ columns, rows, onDelete, onUpdate, isLoading }) => {
   return (
@@ -17,8 +18,8 @@ const BasicTable = ({ columns, rows, onDelete, onUpdate, isLoading }) => {
         <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              {columns.map((column) => (
-                <TableCell>{column}</TableCell>
+              {columns.map((column, index) => (
+                <TableCell key={index}>{column}</TableCell>
               ))}
               <TableCell>Edit</TableCell>
               <TableCell>Delete</TableCell>
@@ -33,19 +34,25 @@ const BasicTable = ({ columns, rows, onDelete, onUpdate, isLoading }) => {
               </TableRow>
             ) : (
               rows.length > 0 &&
-              rows.map((row) => (
+              rows.map((row, index) => (
                 <TableRow
-                  key={row.name}
+                  key={index}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  {columns.map((column) => (
-                    <TableCell>{row[column.toLowerCase()]}</TableCell>
+                  {columns.map((column, i) => (
+                    <TableCell key={i}>{row[column.toLowerCase()]}</TableCell>
                   ))}
                   <TableCell>
-                    <EditIcon onClick={() => onUpdate(row)} />
+                    <EditIcon
+                      onClick={() => onUpdate(row)}
+                      className="table-icons"
+                    />
                   </TableCell>
                   <TableCell>
-                    <DeleteIcon onClick={() => onDelete(row)} />
+                    <DeleteIcon
+                      onClick={() => onDelete(row)}
+                      className="table-icons"
+                    />
                   </TableCell>
                 </TableRow>
               ))

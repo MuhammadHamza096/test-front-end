@@ -286,12 +286,12 @@
   transform: translateY(-2px) rotate(-45deg);
 }
 
-.last-element{
+.last-element {
   margin-right: 0;
 }
 
 @media screen and (max-width: 768px) {
-  .last-element{
+  .last-element {
     margin-right: 0;
   }
 }

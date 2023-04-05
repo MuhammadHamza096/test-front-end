@@ -117,7 +117,7 @@ const Dashboard = () => {
         <Grid item xs={12} md={6}>
           <div className="data-container">
             <div className="data-count-header">
-              <h2>Game Categories</h2>
+              <h2>Report</h2>
             </div>
             <div className="chart">
               <div className="pie-chart">

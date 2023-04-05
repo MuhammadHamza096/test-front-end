@@ -1,14 +1,14 @@
-.modal-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.input-field{
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    height: 47px;
+.input-field {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 47px;
 }
-.button{
-    margin-top: 20px;
+.button {
+  margin-top: 20px;
 }

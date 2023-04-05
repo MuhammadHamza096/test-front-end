@@ -10,33 +10,31 @@
   background-color: #f8f9fa;
 }
 
-
 .main {
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    transition: 0.5s;
-    /* height: 300px; */
-    background-color: #f8f9fa;
-    overflow: hidden;
-  }
-
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  transition: 0.5s;
+  /* height: 300px; */
+  background-color: #f8f9fa;
+  /* overflow: hidden;s */
+}
 
 .mainActive {
-    position: relative;
-    width: calc(100% - 100px);
-    left: 100px;
+  position: relative;
+  width: calc(100% - 100px);
+  left: 100px;
 }
 @media screen and (max-width: 900px) {
-    .main {
-      width: 100%;
-      left: 0;
-    }
-    .main>div{
-      margin: 10px;
-    }
-
-    .mainActive {
-      left: 0px !important;
-    }
+  .main {
+    width: 100%;
+    left: 0;
   }
+  .main > div {
+    margin: 10px;
+  }
+
+  .mainActive {
+    left: 0px !important;
+  }
+}

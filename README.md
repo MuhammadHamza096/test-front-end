@@ -18,7 +18,7 @@ This is a responsive dashboard application that displays data from a REST API. T
 
 ## Mock Data
 
-I have created the backend using MongoDB and designed the APIs for this project, which I have deployed on Vercel at the following URL: `https://test-backend-repo-84ptfx5y3-muhammadhamza096.vercel.app/api/v1/`.
+I have created the backend using MongoDB and designed the APIs for this project, which I have deployed on Vercel at the following URL: `https://test-backend-repo.vercel.app/api/v1/`.
 
 However, since this is a free service, there is a possibility that it could create issues while testing the application. To run the backend locally, you can clone the repository from GitHub at the following `URL: https://github.com/MuhammadHamza096/test_backend_repo`. After cloning, run 'npm i' and 'npm start' to start the server.
 

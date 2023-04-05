@@ -17,8 +17,6 @@ const style = {
 };
 
 function BasicModal({ openModal, children }) {
-  
-
   return (
     <Modal open={openModal}>
       <Box className="box">{children}</Box>

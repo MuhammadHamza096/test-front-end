@@ -174,7 +174,7 @@
   font-size: 1.8rem;
 }
 
-.sidebar-active  .sidebar-menu .sidebar-text {
+.sidebar-active .sidebar-menu .sidebar-text {
   position: absolute;
   background-color: #283686;
   padding: 6px;
@@ -183,7 +183,7 @@
   transform: scale(0) translateX(-20px);
 }
 
-.sidebar-active  .sidebar-menu a:hover .sidebar-text {
+.sidebar-active .sidebar-menu a:hover .sidebar-text {
   transform: scale(1) translateX(0px);
   transition: 0.1s ease;
 }

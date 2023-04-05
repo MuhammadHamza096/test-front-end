@@ -44,6 +44,7 @@ const Games = () => {
           message: "Something went wrong",
           severity: "error",
         });
+        setIsLoading(false);
       });
   };
   const addGame = () => {

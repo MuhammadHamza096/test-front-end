@@ -4,35 +4,33 @@ import "./style.css";
 // React Links
 import { NavLink } from "react-router-dom";
 // Images
-// import TaskLogo from "../assets/images/tasklogo.png";
-import TaskLogo from "../../assets/tasklogo.png"
+
+import TaskLogo from "../../assets/tasklogo.png";
 
 // Icons
 import CloseIcon from "@mui/icons-material/Close";
 
-import PersonIcon from '@mui/icons-material/Person';
-import GamesIcon from '@mui/icons-material/Games';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-
+import PersonIcon from "@mui/icons-material/Person";
+import GamesIcon from "@mui/icons-material/Games";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 
 const Sidebar = ({ toggle, settoggle }) => {
   const Routes = [
     {
       link: "/",
       label: "Dashboard",
-      Icon: <DashboardIcon />,
+      icon: <DashboardIcon />,
     },
     {
       link: "/users",
       label: "Users",
-      Icon: <PersonIcon />,
+      icon: <PersonIcon />,
     },
     {
       link: "/games",
       label: "Games",
-      Icon: <GamesIcon />,
+      icon: <GamesIcon />,
     },
-    
   ];
   const handleSidebarChange = () => {
     if (window.innerWidth <= 900) {
@@ -53,23 +51,17 @@ const Sidebar = ({ toggle, settoggle }) => {
             </div>
             <span>Yolo Group</span>
           </div>
-          <div className="sidebar-bottom" >
-            {Routes.map((items, i) => {
+          <div className="sidebar-bottom">
+            {Routes.map(({ link, label, icon }, i) => {
               return (
-                <>
-                  <ul className="sidebar-menu">
-                    <NavLink
-                      key={i}
-                      to={items.link}
-                      onClick={handleSidebarChange}
-                    >
-                      <li>
-                        <span className="sidebar-icon">{items.Icon}</span>
-                        <span className="sidebar-text">{items.label}</span>
-                      </li>
-                    </NavLink>
-                  </ul>
-                </>
+                <ul className="sidebar-menu" key={i}>
+                  <NavLink key={i} to={link} onClick={handleSidebarChange}>
+                    <li>
+                      <span className="sidebar-icon">{icon}</span>
+                      <span className="sidebar-text">{label}</span>
+                    </li>
+                  </NavLink>
+                </ul>
               );
             })}
           </div>

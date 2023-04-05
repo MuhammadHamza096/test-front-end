@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from "../pages/Dashboard"
+import Dashboard from "../pages/Dashboard";
 import Games from "../pages/Games";
 import Layout from "../pages/Layout";
 import Users from "../pages/Customers";
@@ -22,18 +22,16 @@ const Routing = () => {
   return (
     <Router>
       <Routes>
-        {publicRouting.map(({ path, Component }) => {
+        {publicRouting.map(({ path, Component }, index) => {
           return (
             <Route
               path={path}
+              key={index}
               element={<Layout Component={Component} />}
             ></Route>
           );
         })}
-        <Route
-              path="*"
-              element={<NotFound />}
-            ></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </Router>
   );

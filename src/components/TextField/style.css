@@ -5,13 +5,13 @@ input {
   border: 1px solid lightgray;
   width: 100%;
 }
-.error-color{
+.error-color {
   border-color: red;
 }
-.error-text{
-  color:red;
+.error-text {
+  color: red;
   font-size: 11px;
 }
-.input-container{
+.input-container {
   display: flex;
 }

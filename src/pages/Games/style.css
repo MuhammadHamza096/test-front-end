@@ -20,6 +20,9 @@
 .date-range-item {
   width: 100%;
 }
+.react-datepicker-popper {
+  z-index: 99999;
+}
 
 @media screen and (max-width: 768px) {
   .header {

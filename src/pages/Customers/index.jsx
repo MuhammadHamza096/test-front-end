@@ -40,6 +40,7 @@ const Users = () => {
           message: "Something went wrong",
           severity: "error",
         });
+        setIsLoading(false);
       });
   };
   const addUser = () => {
@@ -92,7 +93,7 @@ const Users = () => {
             placeholder="Search..."
           />
         </div>
-        <div class="table-data">
+        <div className="table-data">
           <Table
             columns={columns}
             rows={users}

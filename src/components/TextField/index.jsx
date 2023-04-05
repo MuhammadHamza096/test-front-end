@@ -11,13 +11,13 @@ const TextField = ({
   return (
     <>
       <div className="input-container">
-      <input
-        value={value}
-        name={name}
-        onChange={onChange}
-        placeholder={placeholder}
-        className={`${error?"error-color":""}`}
-      />
+        <input
+          value={value}
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
+          className={`${error ? "error-color" : ""}`}
+        />
       </div>
       {error && <span className="error-text">{helperText}</span>}
     </>

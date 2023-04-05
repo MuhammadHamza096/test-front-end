@@ -175,8 +175,10 @@ const GameModal = (props) => {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                {gamesCategoriesList.map((category) => (
-                  <MenuItem value={category}>{category}</MenuItem>
+                {gamesCategoriesList.map((category, index) => (
+                  <MenuItem key={index} value={category}>
+                    {category}
+                  </MenuItem>
                 ))}
               </Select>
               {error && (
