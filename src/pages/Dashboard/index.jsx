@@ -26,7 +26,7 @@ const Dashboard = () => {
     getGamesFromAPI();
   }, []);
   useEffect(() => {
-    if (games.length > 0 && users.length) {
+    if (games.length >= 0 && users.length >= 0) {
       const categoryCount = games.reduce((acc, game) => {
         acc[game.category] = (acc[game.category] || 0) + 1;
         return acc;
@@ -87,7 +87,7 @@ const Dashboard = () => {
     }
     setAlert({ ...alert, show: false, severity: "", message: "" });
   };
-
+  const showPiechart = users.length > 0 || games.length > 0;
   return (
     <div>
       <h1>Overview</h1>
@@ -121,11 +121,13 @@ const Dashboard = () => {
             </div>
             <div className="chart">
               <div className="pie-chart">
-                <VictoryPie
-                  data={pieChartData}
-                  colorScale={["red", "aqua"]}
-                  labels={({ datum }) => `${datum.x}: ${datum.y}`}
-                />
+                {showPiechart && (
+                  <VictoryPie
+                    data={pieChartData}
+                    colorScale={["red", "aqua"]}
+                    labels={({ datum }) => `${datum.x}: ${datum.y}`}
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -137,27 +139,29 @@ const Dashboard = () => {
             </div>
             <div className="chart">
               <div className="pie-chart">
-                <VictoryChart domainPadding={20}>
-                  <VictoryAxis
-                    tickValues={gameCategories}
-                    style={{
-                      tickLabels: { fontSize: 10 },
-                    }}
-                  />
-                  <VictoryAxis
-                    dependentAxis
-                    tickFormat={(tick) => `${tick}`}
-                    style={{
-                      tickLabels: { fontSize: 10 },
-                    }}
-                  />
-                  <VictoryBar
-                    data={barChartData}
-                    x="category"
-                    y="count"
-                    style={{ data: { fill: "#c43a31" } }}
-                  />
-                </VictoryChart>
+                {games.length > 0 && (
+                  <VictoryChart domainPadding={20}>
+                    <VictoryAxis
+                      tickValues={gameCategories}
+                      style={{
+                        tickLabels: { fontSize: 10 },
+                      }}
+                    />
+                    <VictoryAxis
+                      dependentAxis
+                      tickFormat={(tick) => `${tick}`}
+                      style={{
+                        tickLabels: { fontSize: 10 },
+                      }}
+                    />
+                    <VictoryBar
+                      data={barChartData}
+                      x="category"
+                      y="count"
+                      style={{ data: { fill: "#c43a31" } }}
+                    />
+                  </VictoryChart>
+                )}
               </div>
             </div>
           </div>
